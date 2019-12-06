@@ -34,7 +34,7 @@ final class CreateSchemaCommand extends Command
      * Constructor
      *
      * @param ParameterBag $bag
-     * @param Connection $connection
+     * @param Connection   $connection
      */
     public function __construct(ParameterBag $bag, Connection $connection)
     {
@@ -62,6 +62,7 @@ final class CreateSchemaCommand extends Command
     {
         if (!$input->getOption('force')) {
             $output->writeln('You must use the --force option to execute this command.');
+
             return -1;
         }
 

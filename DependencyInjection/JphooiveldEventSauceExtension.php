@@ -76,6 +76,8 @@ final class JphooiveldEventSauceExtension extends Extension
             $container->setAlias('jphooiveld_eventsauce.snapshot_repository', $config['snapshot_repository']['service']);
         }
 
+        $loader->load('command.xml');
+
         $container->setParameter('jphooiveld_eventsauce.snapshot_repository.enabled', $config['snapshot_repository']['enabled']);
         $container->setParameter('jphooiveld_eventsauce.message_repository.aggregates', $config['message_repository']['aggregates']);
         $container->setParameter('jphooiveld_eventsauce.time_of_recording.timezone', $config['time_of_recording']['timezone']);
